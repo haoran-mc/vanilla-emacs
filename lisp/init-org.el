@@ -2,6 +2,7 @@
 (setq org-src-fontify-natively t)
 (setq org-M-RET-may-split-line '((header-line . nil)))
 (setq org-ellipsis " ▼ ")
+(setq org-return-follows-link t)
 ;; (setq org-ellipsis "..")
 
 ;; open the link in full screen

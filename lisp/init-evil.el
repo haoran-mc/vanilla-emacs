@@ -1,31 +1,41 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
-  "ff" 'find-file
-  "fr" 'recentf-open-files
+  ":" 'counsel-M-x
+  "SPC" 'counsel-M-x
+  "TAB" 'spacemacs/alternate-buffer
+
   "bb" 'switch-to-buffer
   "bk" 'kill-buffer
   "bq" 'save-buffer-kill-terminal
   "bs" 'create-scratch-buffer
-  "pf" 'counsel-git
-  "sp" 'helm-do-ag-project-root
-  ;; ---
-  ":" 'counsel-M-x
-  "TAB" 'spacemacs/alternate-buffer
-  "fj" 'dired
-  "dj" 'dired
-  "wV" (lambda() (interactive) (split-window-right) (windmove-right))
-  "wS" (lambda() (interactive) (split-window-below) (windmove-down))
-  "rc" (lambda() (interactive) (dired "~/.emacs.d/"))
+
+  "dj" 'dired-jump
+
+  "ff" 'find-file
+  "fr" 'recentf-open-files
+
   "go" 'evil-tabs-mode
-  "xx" 'exchange-point-and-mark
+
+  "odh" '(lambda() (interactive) (dired "C:/Users/haora/haoran/"))
+  "oi"  '(lambda() (interactive) (find-file "C:/Users/haora/haoran/no/org/site/org/index.org"))
+
+  "pf" 'counsel-git
+
+  "rc" (lambda() (interactive) (find-file "~/.emacs.d/init.el"))
   "rb" 'bookmark-jump-other-window
   "rm" 'bookmark-set
   "rl" 'bookmark-bmenu-list
-  "rr" (lambda() (interactive) (find-file "~/.emacs.d/bookmarks"))
-  "xns" 'org-narrow-to-subtree
-  "xnw" 'widen
-  "cf" 'yafolding-toggle-element
+
+  "sp" 'helm-do-ag-project-root
+
+  "tn" 'tab-new
+  "tt" 'tab-bar-select-tab-by-name
+
+  "xx" 'exchange-point-and-mark
+
+  "wv" (lambda() (interactive) (split-window-right) (windmove-right))
+  "ws" (lambda() (interactive) (split-window-below) (windmove-down))
   "z" 'evil-emacs-state)
 
 ;; evil

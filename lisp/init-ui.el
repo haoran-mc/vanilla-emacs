@@ -1,22 +1,20 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(global-linum-mode t)
+(global-linum-mode nil)
 (setq linum-format "")
 (setq-default frame-title-format "Forming into my Dreamtale!")
 ;; (setq initial-frame-alist (quote ((fullscreen . maximized))))
 (global-hl-line-mode t)
 (setq ring-bell-function 'ignore)
 (if (eq system-type 'windows-nt)
-  (set-face-attribute 'default nil :font "Consolas")
-  (set-face-attribute 'default nil :font "DejaVu Sans Mono 10"))
+    (set-face-attribute 'default nil :font "Consolas")
+  (set-face-attribute 'default nil :font "DejaVuSansMono Nerd Font Mono"))
 (setq-default inhibit-startup-screen t)
 (setq-default cursor-type 'bar)
 
-
 ;; (set-frame-parameter (selected-frame) 'alpha (list 85 60))
 ;; (add-to-list 'default-frame-alist (cons 'alpha (list 85 60)))
-
 
 (setq default-frame-alist
       '((vertical-scroll-bars)

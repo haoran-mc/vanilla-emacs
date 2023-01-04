@@ -23,7 +23,7 @@
 ;; (setq recentf-save-file "~/.emacs.d/bin/recentf")
 ;; (setq abbrev-file-name "~/.emacs.d/bin/abbrev_defs")
 ;; (setq default-major-mode 'text-mode)
-;;
+
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
 (setq scroll-margin 5 scroll-consrvatively 10000)

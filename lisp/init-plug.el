@@ -12,14 +12,15 @@
                           evil
                           evil-leader
                           evil-nerd-commenter
-                          evil-tabs
+                          ;; evil-tabs
                           evil-search-highlight-persist
                           smooth-scrolling
                           auto-yasnippet
-                          org-bullets
+                          ;; org-bullets
                           swiper    ;; C-s 优化搜索，C-f 优化，rencent 文件优化
                           counsel   ;; swiper 依赖
-                          web-mode
+                          all-the-icons
+                          ;; web-mode
                           ) "Default packages")
 
 ;; 这样使用 autoremove 就会根据上面 predefeined-package 中的包删除了
@@ -92,5 +93,9 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
+
+;; all-the-icons
+(when (display-graphic-p)
+  (require 'all-the-icons))
 
 (provide 'init-plug)
