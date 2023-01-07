@@ -12,15 +12,11 @@
                           evil
                           evil-leader
                           evil-nerd-commenter
-                          ;; evil-tabs
                           evil-search-highlight-persist
                           smooth-scrolling
                           auto-yasnippet
-                          ;; org-bullets
                           swiper    ;; C-s 优化搜索，C-f 优化，rencent 文件优化
                           counsel   ;; swiper 依赖
-                          all-the-icons
-                          ;; web-mode
                           ) "Default packages")
 
 ;; 这样使用 autoremove 就会根据上面 predefeined-package 中的包删除了
@@ -42,6 +38,10 @@
 
 ;; nolittering
 (require 'no-littering)
+(add-to-list 'recentf-exclude no-littering-var-directory)
+(add-to-list 'recentf-exclude no-littering-etc-directory)
+ (setq auto-save-file-name-transforms
+	`((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 
 ;; company
 (global-company-mode t)
@@ -78,8 +78,8 @@
 (setq auto-insert-directory (locate-user-emacs-file "templates"))
 (add-hook 'find-file-hook 'auto-insert)
 (auto-insert-mode 1)
-(define-auto-insert "\\.el$" [ "~/.emacs.d/snippets/defaults-elisp.el" autoinsert-yas-expand ])
-(define-auto-insert "\\.org$" ["~/.emacs.d/snippets/default-org.el" autoinsert-yas-expand])
+;; (define-auto-insert "\\.el$" [ "~/.emacs.d/templates/defaults-elisp.el" autoinsert-yas-expand ])
+(define-auto-insert "\\.org$" ["~/.emacs.d/templates/default-org.org" autoinsert-yas-expand])
 
 ;; org-bullets
 ;; (install-pkg 'org-bullets)
@@ -93,9 +93,5 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
-
-;; all-the-icons
-(when (display-graphic-p)
-  (require 'all-the-icons))
 
 (provide 'init-plug)

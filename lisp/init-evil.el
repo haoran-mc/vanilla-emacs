@@ -1,3 +1,5 @@
+(setq evil-want-C-u-scroll t)
+
 (global-evil-leader-mode)
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key

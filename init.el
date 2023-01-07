@@ -13,7 +13,7 @@
 
 (require 'init-ui)
 (require 'init-base)
-(require 'init-func)
+(require 'init-funcs)
 (require 'init-org)
 (require 'init-plug)
 (require 'init-evil)

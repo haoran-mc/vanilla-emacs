@@ -82,4 +82,4 @@ the current layouts buffers."
       (set-window-buffer-start-and-point window buf start pos))))
 
 
-(provide 'init-func)
+(provide 'init-funcs)
