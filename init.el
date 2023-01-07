@@ -17,8 +17,8 @@
 (require 'init-org)
 (require 'init-plug)
 (require 'init-evil)
-;; (require 'init-link)
-(require 'init-key)
+(require 'init-link)
+(require 'init-keys)
 
 (when (file-exists-p custom-file)
   (load custom-file))

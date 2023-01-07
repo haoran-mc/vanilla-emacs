@@ -68,6 +68,7 @@
   (sp-push-position-to-ring)) ;; 最后一句，记录位置
 
 (define-key evil-normal-state-map (kbd "RET") '+org/dwim-at-point)
-(define-key org-mode-map (kbd "M-b") 'sp-get-position-from-ring) ;; 来跳转不同的位置
+(define-key evil-normal-state-map (kbd "C-c &") 'org-mark-ring-goto)
+;; (define-key evil-normal-state-map (kbd "C-c &") 'sp-get-position-from-ring)
 
 (provide 'init-link)

@@ -17,8 +17,8 @@
 
   "go" 'evil-tabs-mode
 
-  "odh" '(lambda() (interactive) (dired "C:/Users/haora/haoran/"))
-  "oi"  '(lambda() (interactive) (find-file "C:/Users/haora/haoran/no/org/site/org/index.org"))
+  "odh" '(lambda() (interactive) (dired "~/haoran/"))
+  "oi"  '(lambda() (interactive) (find-file "~/haoran/no/org/site/org/index.org"))
 
   "pf" 'counsel-git
 
