@@ -14,6 +14,8 @@
 (if (not (equal window-system 'x))
     (with-eval-after-load 'org
       (define-key evil-normal-state-map (kbd "TAB") 'org-cycle)))
+(define-key evil-normal-state-map (kbd "RET") 'org-open-at-point)
+(define-key evil-normal-state-map (kbd "C-c &") 'org-mark-ring-goto)
 
 
 (provide 'init-keys)

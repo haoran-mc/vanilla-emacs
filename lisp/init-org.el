@@ -2,8 +2,16 @@
 (setq org-src-fontify-natively t)
 (setq org-M-RET-may-split-line '((header-line . nil)))
 (setq org-ellipsis " ▼ ")
-(setq org-return-follows-link t)
 ;; (setq org-ellipsis "..")
+(setq org-return-follows-link nil)
+(setq org-startup-folded 'content)
+(setq org-hide-block-startup t)
+(setq org-startup-indented t)
+(setq org-fontify-todo-headline t)
+(setq org-fontify-done-headline t)
+(setq org-fontify-whole-heading-line t)
+(setq org-fontify-quote-and-verse-blocks t)
+(setq org-list-demote-modify-bullet '(("+" . "-") ("1." . "a.") ("-" . "+")))
 
 ;; open the link in full screen
 (setq org-link-frame-setup

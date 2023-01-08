@@ -48,16 +48,16 @@
 (setq-default company-idle-delay 0.08)
 (setq-default company-minimum-prefix-length 2)
 
-;;hungry-delete
+;; hungry-delete
 (require 'hungry-delete)
 (global-hungry-delete-mode)
 
-;;smooth-scroll
+;; smooth-scroll
 (setq scroll-margin 5
       scroll-conservatively 9999
       scroll-step 1)
 
-;;auto-yasnippet，自动生成org模板
+;; auto-yasnippet，自动生成org模板
 (require 'yasnippet)
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
@@ -71,7 +71,7 @@
   "Replace text in yasnippet template."
   (yas-expand-snippet (buffer-string) (point-min) (point-max)))
 
-;;autoinsert
+;; autoinsert
 (require 'autoinsert)
 ;; Don't want to be prompted before insertion:
 (setq auto-insert-query nil)
@@ -83,11 +83,11 @@
 
 ;; org-bullets
 ;; (install-pkg 'org-bullets)
-(require 'org-bullets)
-(add-hook 'org-mode-hook #'(lambda () (org-bullets-mode 1)))
-(if (equal window-system 'x)
-    (add-hook 'org-mode-hook #'(lambda () (org-bullets-mode 1))))
-(setq org-bullets-bullet-list '("☯" "◉" "○" "✿" "❀" "◇"))
+;; (require 'org-bullets)
+;; (add-hook 'org-mode-hook #'(lambda () (org-bullets-mode 1)))
+;; (if (equal window-system 'x)
+;;     (add-hook 'org-mode-hook #'(lambda () (org-bullets-mode 1))))
+;; (setq org-bullets-bullet-list '("☯" "◉" "○" "✿" "❀" "◇"))
 
 ;; swiper
 (ivy-mode 1)

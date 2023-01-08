@@ -20,7 +20,11 @@
   "go" 'evil-tabs-mode
 
   "odh" '(lambda() (interactive) (dired "~/haoran/"))
-  "oi"  '(lambda() (interactive) (find-file "~/haoran/no/org/site/org/index.org"))
+  "of"  'ogmc/indent-region-or-buffer
+  "oi"  '(lambda()
+           (interactive)
+           (find-file "~/haoran/no/org/site/org/index.org")
+           (message "hard_pull before"))
 
   "pf" 'counsel-git
 
