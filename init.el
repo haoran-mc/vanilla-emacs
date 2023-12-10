@@ -36,6 +36,7 @@
 
 (require 'init-ui)
 (require 'init-smex)
+(require 'init-git)
 ;; (require 'init-base)
 ;; (require 'init-funcs)
 ;; (require 'init-org)

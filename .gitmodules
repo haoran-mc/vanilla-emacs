@@ -2,3 +2,19 @@
 	path = site-lisp/smex
 	url = git@github.com:nonsequitur/smex.git
 	shallow = true
+[submodule "site-lisp/magit"]
+	path = site-lisp/magit
+	url = git@github.com:magit/magit.git
+	shallow = true
+[submodule "site-lisp/compat"]
+	path = site-lisp/compat
+	url = git@github.com:emacs-compat/compat.git
+	shallow = true
+[submodule "site-lisp/dash"]
+	path = site-lisp/dash
+	url = git@github.com:magnars/dash.el.git
+	shallow = true
+[submodule "site-lisp/with-editor"]
+	path = site-lisp/with-editor
+	url = git@github.com:magit/with-editor.git
+	shallow = true
