@@ -1,0 +1,4 @@
+[submodule "site-lisp/smex"]
+	path = site-lisp/smex
+	url = git@github.com:nonsequitur/smex.git
+	shallow = true
