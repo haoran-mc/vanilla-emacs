@@ -1,5 +1,6 @@
-(setq user-full-name "L.M.haoran")
+(setq user-full-name "Haoran Liu")
 (setq user-mail-address "haoran.mc@outlook.com")
+
 (set-language-environment "UTF-8")
 (global-auto-revert-mode t)      ;; load external changes automatically
 (setq make-backup-files nil)
@@ -10,9 +11,9 @@
 (setq dired-recursive-copies 'always)          ;; recursive copy
 (put 'dired-find-alternate-file 'disabled nil) ;; common buffer
 ;; work with upper sentence
-(with-eval-after-load 'dired
-  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
-(setq x-select-enable-clipboard t)             ;; shared with the system clipboard
+;;(with-eval-after-load 'dired
+;;   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+;; (setq x-select-enable-clipboard t)             ;; shared with the system clipboard
 (save-place-mode t)                  ;; save cursor position
 (setq-default tab-width 4)           ;; tab length
 (setq-default indent-tabs-mode nil)  ;; use space rather tab

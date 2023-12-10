@@ -9,16 +9,13 @@
       "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
 
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
+(add-to-list 'load-path (locate-user-emacs-file "site-lisp"))
 (setq debug-on-error init-file-debug)
 
-(require 'init-ui)
-(require 'init-base)
-(require 'init-funcs)
-(require 'init-org)
-(require 'init-plug)
-(require 'init-evil)
-;; (require 'init-link)
-(require 'init-keys)
+;; (require 'init-ui)
+;; (require 'init-base)
+;; (require 'init-funcs)
+;; (require 'init-org)
 
 (when (file-exists-p custom-file)
   (load custom-file))
