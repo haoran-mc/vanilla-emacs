@@ -34,12 +34,15 @@
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
 
+(require 'basic-tookit)
+
 (require 'init-ui)
-(require 'init-smex)
+;; (require 'init-smex)
 (require 'init-git)
-;; (require 'init-base)
+(require 'init-base)
 ;; (require 'init-funcs)
 ;; (require 'init-org)
+(require 'init-keys)
 
 (when (file-exists-p custom-file)
   (load custom-file))

@@ -28,6 +28,10 @@
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
 (setq scroll-margin 5 scroll-consrvatively 10000)
+
+
+
+
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
