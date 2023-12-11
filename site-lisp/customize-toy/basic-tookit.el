@@ -6,8 +6,24 @@
 
 
 
+;;;###autoload
+(defun vanilla/indent-region-or-buffer ()
+  "Indent a region if selected, otherwise the whole buffer."
+  (interactive)
+  (save-excursion
+    (if (region-active-p)
+        (progn
+          (indent-region (region-beginning) (region-end))
+          (message "Indented selected region."))
+      (progn
+        (vanilla/indent-buffer)
+        (message "Indented buffer.")))))
 
-
+;;;###autoload
+(defun vanilla/indent-buffer ()
+  "Indent the currently visited buffer."
+  (interactive)
+  (indent-region (point-min) (point-max)))
 
 
 ;;;###autoload

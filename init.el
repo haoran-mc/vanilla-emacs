@@ -33,6 +33,7 @@
   (add-subdirs-to-load-path (file-name-directory extdir)))
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
+(require 'windowop)
 (require 'cursormove)
 (require 'basic-tookit)
 (require 'mwim)
