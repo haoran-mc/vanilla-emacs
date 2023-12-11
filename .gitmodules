@@ -18,3 +18,11 @@
 	path = site-lisp/with-editor
 	url = git@github.com:magit/with-editor.git
 	shallow = true
+[submodule "site-lisp/which-key"]
+	path = site-lisp/which-key
+	url = git@github.com:justbur/emacs-which-key.git
+	shallow = true
+[submodule "site-lisp/mwim.el"]
+	path = site-lisp/mwim.el
+	url = git@github.com:alezost/mwim.el.git
+	shallow = true
