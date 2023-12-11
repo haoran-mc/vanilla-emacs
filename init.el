@@ -33,14 +33,14 @@
   (add-subdirs-to-load-path (file-name-directory extdir)))
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
+(require 'cursormove)
 (require 'basic-tookit)
 (require 'mwim)
 
 (require 'init-ui)
 (require 'init-base)
-;; (require 'init-smex)
+(require 'init-smex)
 (require 'init-which_key)
-(require 'init-git)
 ;; (require 'init-funcs)
 ;; (require 'init-org)
 (require 'init-keys)
