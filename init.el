@@ -36,7 +36,9 @@
 (require 'windowop)
 (require 'cursormove)
 (require 'basic-tookit)
+(require 'open-newline)
 (require 'mwim)
+(require 'delete-block)
 
 (require 'init-ui)
 (require 'init-base)

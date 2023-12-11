@@ -8,20 +8,24 @@
 
 (global-unset-key (kbd "M-z")) ;; zap-to-char like vim df?
 (global-unset-key (kbd "C-\\")) ;; toggle-input-method one activation button, little use
+(global-unset-key (kbd "C-o")) ;; open-line bad function
+(global-unset-key (kbd "C-l")) ;; recenter-top-bottom vanilla/move-to-window-* is better
 
 
 
 
 ;; here is C-? ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(global-set-key [remap move-beginning-of-line] #'mwim-beginning)
-(global-set-key [remap move-end-of-line] #'mwim-end)
+(global-set-key [remap move-beginning-of-line] #'mwim-beginning) ;; C-a
+(global-set-key [remap move-end-of-line] #'mwim-end) ;; C-e
+(global-set-key [remap backward-kill-word] #'delete-block-backward)
+(global-set-key [remap kill-word] #'delete-block-forward)
+
 
 (global-set-key (kbd "C-<tab>") 'spacemacs/alternate-buffer)
 
 (global-set-key (kbd "C-<return>") 'bookmark-jump)
 (with-eval-after-load 'org ;; eval below code after org (no need require org at start)
   (define-key org-mode-map (kbd "C-<return>") 'bookmark-jump))
-
 
 (global-set-key (kbd "C-\\ h") 'windmove-left)
 (global-set-key (kbd "C-\\ j") 'windmove-down)
@@ -39,6 +43,9 @@
 (global-set-key (kbd "C-\\ -") 'vanilla/split-window-vertically-instead)
 
 
+(global-set-key (kbd "C-l") 'open-newline-below)
+(global-set-key (kbd "C-o") 'open-newline-above)
+
 
 (global-set-key (kbd "M-z t") 'vanilla/move-to-window-top)
 (global-set-key (kbd "M-z z") 'vanilla/move-to-window-middle)
@@ -47,7 +54,6 @@
 
 (global-set-key (kbd "s-j") 'lazycat/scroll-up-one-line)
 (global-set-key (kbd "s-k") 'lazycat/scroll-down-one-line)
-
 
 
 
