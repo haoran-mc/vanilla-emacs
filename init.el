@@ -42,6 +42,7 @@
 
 (require 'init-ui)
 (require 'init-base)
+(require 'init-bookmark)
 (require 'init-smex)
 (require 'init-which_key)
 ;; (require 'init-funcs)

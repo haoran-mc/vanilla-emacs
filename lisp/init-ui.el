@@ -6,7 +6,8 @@
 ;; (setq linum-format "")
 (setq-default frame-title-format "Forming into my Dreamtale!")
 
-(setq initial-frame-alist (quote ((fullscreen . maximized))))
+;; (setq initial-frame-alist (quote ((fullscreen . maximized))))
+(setq initial-frame-alist (quote ((maximized . fullscreen))))
 
 (global-hl-line-mode t)
 (setq ring-bell-function 'ignore)
