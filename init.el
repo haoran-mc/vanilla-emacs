@@ -40,14 +40,21 @@
 (require 'mwim)
 (require 'delete-block)
 
+
 (require 'init-ui)
 (require 'init-base)
 (require 'init-bookmark)
-(require 'init-smex)
-(require 'init-which_key)
-;; (require 'init-funcs)
+;; (require 'init-smex)
+(require 'init-which-key)
+
 ;; (require 'init-org)
 (require 'init-keys)
+
+(require 'init-minibuffer)
+(require 'init-tab-bar)
+
+(require 'init-dev)
+(require 'init-golang)
 
 (when (file-exists-p custom-file)
   (load custom-file))

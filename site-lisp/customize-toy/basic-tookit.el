@@ -3,8 +3,14 @@
 
 
 
-
-
+;;;###autoload
+(defun vanilla/mark-whole-word ()
+  "Mark the whole word at point without moving the cursor."
+  (interactive)
+  (let ((bounds (bounds-of-thing-at-point 'word)))
+    (when bounds
+      (push-mark (car bounds) t t)
+      (goto-char (cdr bounds)))))
 
 ;;;###autoload
 (defun vanilla/indent-region-or-buffer ()

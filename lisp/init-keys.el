@@ -7,18 +7,21 @@
 
 
 (global-unset-key (kbd "M-z")) ;; zap-to-char like vim df?
+
 (global-unset-key (kbd "C-\\")) ;; toggle-input-method one activation button, little use
 (global-unset-key (kbd "C-o")) ;; open-line bad function
 (global-unset-key (kbd "C-l")) ;; recenter-top-bottom vanilla/move-to-window-* is better
 
 
+;; here is C-? ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define-key isearch-mode-map (kbd "<tab>") 'isearch-complete)
 
 
 ;; here is C-? ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-set-key [remap move-beginning-of-line] #'mwim-beginning) ;; C-a
 (global-set-key [remap move-end-of-line] #'mwim-end) ;; C-e
-(global-set-key [remap backward-kill-word] #'delete-block-backward)
-(global-set-key [remap kill-word] #'delete-block-forward)
+(global-set-key [remap backward-kill-word] #'delete-block-backward) ;; M-BS
+(global-set-key [remap kill-word] #'delete-block-forward) ;; M-d
 
 
 (global-set-key (kbd "C-<tab>") 'spacemacs/alternate-buffer)
@@ -45,8 +48,11 @@
 
 (global-set-key (kbd "C-l") 'open-newline-below)
 (global-set-key (kbd "C-o") 'open-newline-above)
+(global-set-key (kbd "C-r") 'isearch-repeat-backward)
 
 
+(global-set-key (kbd "M-@") 'vanilla/mark-whole-word)
+(global-set-key (kbd "M-:") 'smex+) ;; eval-expression use scratch instead
 (global-set-key (kbd "M-z t") 'vanilla/move-to-window-top)
 (global-set-key (kbd "M-z z") 'vanilla/move-to-window-middle)
 (global-set-key (kbd "M-z b") 'vanilla/move-to-window-bottom)
@@ -60,7 +66,7 @@
 ;; b for buffer and bookmark
 (global-set-key (kbd "C-c b x") 'vanilla/create-scratch-buffer)
 
-(global-set-key (kbd "C-c f f") 'ido-find-file) ;; C-x C-f is too hard
+(global-set-key (kbd "C-c f f") 'ido-find-file)
 (global-set-key (kbd "C-c f r") 'recentf-open-files)
 
 (global-set-key (kbd "C-c s") 'tab-bar-switch-to-tab)
@@ -69,6 +75,8 @@
 (global-set-key (kbd "C-c t n") 'vanilla/create-new-tab-bar)
 (global-set-key (kbd "C-c t c") 'tab-bar-close-tab)
 (global-set-key (kbd "C-c t r") 'tab-bar-rename-tab)
+(global-set-key (kbd "C-c t n") 'tab-bar-switch-to-next-tab)
+(global-set-key (kbd "C-c t p") 'tab-bar-switch-to-prev-tab)
 
 ;; u for user
 (global-set-key (kbd "C-c u i") 'vanilla/indent-buffer)

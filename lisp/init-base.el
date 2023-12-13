@@ -15,6 +15,24 @@
 (setq dired-recursive-copies 'always)          ;; recursive copy
 (put 'dired-find-alternate-file 'disabled nil) ;; common buffer
 
+
+
+
+
+
+
+;; Treats the `_' as a word constituent
+(add-hook 'after-change-major-mode-hook
+          (lambda ()
+            (modify-syntax-entry ?_ "w")
+            (modify-syntax-entry ?- "w")))
+
+
+
+
+
+
+
 (save-place-mode t)                  ;; save cursor position
 (setq-default tab-width 4)           ;; tab length
 (setq-default indent-tabs-mode nil)  ;; use space rather tab
@@ -24,7 +42,7 @@
 (setq scroll-margin 5 scroll-consrvatively 10000)
 
 
-(ido-mode)
+;; (ido-mode)
 
 (require 'recentf)
 (recentf-mode 1)

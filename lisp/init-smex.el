@@ -8,7 +8,7 @@
     (smex)
     ))
 
-(global-set-key (kbd "M-x") 'smex+)
+;; (global-set-key (kbd "M-x") 'smex+)
 
 (provide 'init-smex)
 ;;; init-smex.el ends here
