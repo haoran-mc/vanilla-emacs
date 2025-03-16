@@ -41,10 +41,10 @@
 (require 'delete-block)
 
 
+(require 'init-meow)
 (require 'init-ui)
 (require 'init-base)
 (require 'init-bookmark)
-;; (require 'init-smex)
 (require 'init-which-key)
 
 ;; (require 'init-org)
