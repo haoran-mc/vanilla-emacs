@@ -14,7 +14,7 @@
 
 (if (eq system-type 'windows-nt)
     (set-face-attribute 'default nil :font "Consolas")
-  (set-face-attribute 'default nil :font "DejaVuSansMono Nerd Font Mono"))
+  (set-face-attribute 'default nil :font "Liga SFMono Nerd Font"))
 
 (setq-default inhibit-startup-screen t)
 ;; (setq-default cursor-type 'bar)
