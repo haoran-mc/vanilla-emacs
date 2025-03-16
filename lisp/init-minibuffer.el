@@ -10,12 +10,10 @@
 
 
 ;;; minibuffer ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/Documents/emacs/local-packages/compat")
-(add-to-list 'load-path "~/Documents/emacs/local-packages/vertico")
 (require 'vertico)
 (vertico-mode 1)
 
-(add-to-list 'load-path "~/Documents/emacs/local-packages/consult")
+
 (require 'consult)
 (global-set-key [remap goto-line]              #'consult-goto-line)
 (global-set-key [remap switch-to-buffer]       #'consult-buffer)
@@ -29,7 +27,7 @@
 (global-set-key [remap projectile-ripgrep]     #'consult-ripgrep)
 
 
-(add-to-list 'load-path "~/Documents/emacs/local-packages/orderless")
+
 (require 'orderless)
 (setq completion-styles '(orderless))
 

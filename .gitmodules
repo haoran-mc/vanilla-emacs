@@ -26,3 +26,26 @@
 	path = site-lisp/mwim.el
 	url = git@github.com:alezost/mwim.el.git
 	shallow = true
+[submodule "site-lisp/meow"]
+	path = site-lisp/meow
+	url = git@github.com:meow-edit/meow.git
+	shallow = true
+[submodule "site-lisp/consult"]
+	path = site-lisp/consult
+	url = git@github.com:minad/consult.git
+	shallow = true
+[submodule "site-lisp/markdown-mode"]
+	path = site-lisp/markdown-mode
+	url = git@github.com:jrblevin/markdown-mode.git
+	shallow = true
+[submodule "site-lisp/orderless"]
+	path = site-lisp/orderless
+	url = git@github.com:oantolin/orderless.git
+	shallow = true
+[submodule "site-lisp/vertico"]
+	path = site-lisp/vertico
+	url = git@github.com:minad/vertico.git
+	shallow = true
+[submodule "site-lisp/yasnippet"]
+	path = site-lisp/yasnippet
+	url = git@github.com:joaotavora/yasnippet.git

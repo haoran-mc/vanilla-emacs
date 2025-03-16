@@ -1,10 +1,8 @@
 
-(add-to-list 'load-path "~/Documents/emacs/local-packages/markdown-mode")
+
 (require 'markdown-mode)
 
 
-
-(add-to-list 'load-path "~/Documents/emacs/local-packages/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
 
